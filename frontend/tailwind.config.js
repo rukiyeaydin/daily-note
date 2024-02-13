@@ -8,7 +8,6 @@ export default {
     extend: {
       colors: {
         'turkuaz': '#9fd3c7',
-        'pembe': '#ffe9e3',
       },
     },
   },

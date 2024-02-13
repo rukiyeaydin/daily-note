@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProfileSettings = () => {
   const [editing, setEditing] = useState(false);
@@ -26,8 +27,9 @@ const ProfileSettings = () => {
   };
 
   return (
-    <div>
-      <div className="mb-4 flex items-center justify-between border-b border-b-slate-300 pb-2 truncate">
+    <div className="bg-zinc-100 p-3 text-black my-5 rounded-md">
+      <h1 className="text-xl text-center font-bold mb-5">General</h1>
+      <div className="mb-4 flex items-center justify-between border-b border-b-gray-400 pb-2 truncate">
         <label className="block mr-1">Username:</label>
         {editing ? (
           <input
@@ -38,10 +40,10 @@ const ProfileSettings = () => {
             className="border rounded px-2 py-1 w-9/12"
           />
         ) : (
-          <p className="text-emerald-600">{username}</p>
+          <p className="text-cyan-700">{username}</p>
         )}
       </div>
-      <div className="mb-4 flex items-center justify-between border-b border-b-slate-300 pb-2 truncate">
+      <div className="mb-4 flex items-center justify-between border-b border-b-gray-400 pb-2 truncate">
         <label className="block mr-1">E-mail:</label>
         {editing ? (
           <input
@@ -52,10 +54,10 @@ const ProfileSettings = () => {
             className="border rounded px-2 py-1 w-9/12"
           />
         ) : (
-          <p className="text-emerald-600">{email}</p>
+          <p className="text-cyan-700">{email}</p>
         )}
       </div>
-      <div className="mb-4 flex items-center justify-between border-b border-b-slate-300 pb-2 truncate">
+      <div className="mb-4 flex items-center justify-between border-b border-b-gray-400 pb-2 truncate">
         <label className="block mr-1">Şifre:</label>
         {editing ? (
           <input
@@ -66,10 +68,10 @@ const ProfileSettings = () => {
             className="border rounded px-2 py-1 w-9/12"
           />
         ) : (
-          <p className="text-emerald-600">********</p>
+          <p className="text-cyan-700">********</p>
         )}
       </div>
-      <button className="bg-rose-500 hover:bg-white hover:text-rose-500 border-2 border-rose-500 transition-all p-1 rounded-md w-20 text-sm text-white" onClick={editing ? handleSave : handleEdit}>
+      <button className="bg-cyan-700 hover:bg-cyan-600 transition-all p-1 rounded-md w-20 text-sm text-white" onClick={editing ? handleSave : handleEdit}>
         {editing ? "Save" : "Edit"}
       </button>
     </div>
