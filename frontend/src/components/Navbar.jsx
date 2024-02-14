@@ -15,11 +15,13 @@ const Navbar = () => {
         <FaSearch className='text-2xl text-white cursor-pointer'/>
         <TEDropdown className="flex justify-center">
           <TEDropdownToggle className="flex items-center bg-white text-rose-500 text-2xl py-1 px-2 rounded-md border-2 border-transparent hover:text-rose-300 transition-all"><p className=''>R</p></TEDropdownToggle>
-          <TEDropdownMenu className='border-2 bg-neutral-800 border-none p-3 mt-4 rounded-md text-right w-28'>
-            <TEDropdownItem className='mb-2'><Link to='/' className='text-white hover:text-sky-200 transition-all'>Home</Link></TEDropdownItem>
-            <TEDropdownItem className='mb-2'><Link to="/profile" className='text-white hover:text-sky-200 transition-all'>Profile</Link></TEDropdownItem>
-            <hr className="my-2 h-0 border border-t-0 border-solid border-white opacity-50 dark:border-white" />
-            <TEDropdownItem><Link className='text-rose-500 hover:text-rose-400'>Log Out</Link></TEDropdownItem>
+          <TEDropdownMenu className='mt-1 text-right rounded-md'>
+            <div className='bg-rose-500 p-2 w-24'>
+              <TEDropdownItem className='mb-2'><Link to='/' className='text-white hover:text-sky-200 transition-all'>Home</Link></TEDropdownItem>
+              <TEDropdownItem className='mb-2'><Link to="/profile" className='text-white hover:text-sky-200 transition-all'>Profile</Link></TEDropdownItem>
+              <hr className="my-2 h-0 border border-t-0 border-solid border-white opacity-50 dark:border-white" />
+              <TEDropdownItem><Link className='text-black hover:text-gray-700'>Log Out</Link></TEDropdownItem>
+            </div>
           </TEDropdownMenu>
         </TEDropdown>
       </div>
