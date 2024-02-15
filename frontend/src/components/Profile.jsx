@@ -30,15 +30,15 @@ const Profile = () => {
 
       <div onClick={handleActive} className="">
         {active ? 
-          <MdKeyboardDoubleArrowLeft className='left-arrow text-3xl bg-rose-500 hover:bg-white hover:text-rose-500 text-white cursor-pointer transition-all duration-300'/> :
-          <MdKeyboardDoubleArrowRight className='right-arrow text-3xl bg-rose-500 hover:bg-white hover:text-rose-500 text-white cursor-pointer transition-all duration-300'/>
+          <MdKeyboardDoubleArrowLeft className='left-arrow text-4xl bg-rose-500 hover:bg-white hover:text-rose-500 text-white cursor-pointer transition-all duration-300 rounded-br-full pr-2 pb-2'/> :
+          <MdKeyboardDoubleArrowRight className='right-arrow text-4xl bg-rose-500 hover:bg-white hover:text-rose-500 text-white cursor-pointer transition-all duration-300 rounded-br-full pr-2 pb-2'/>
         }
       </div>
 
-      <div className="right p-3 absolute -z-10">
-      <div className="flex flex-col items-center justify-center">            
-        <h1 className='text-3xl font-semibold m-5 bg-gradient-to-r from-rose-500 to-cyan-500 inline-block text-transparent bg-clip-text'>MY NOTES</h1>
-        <div className='notes flex flex-wrap items-start justify-center '>
+      <div className="right p-3 absolute -z-10 min-h-screen">
+        <div className="flex flex-col items-center justify-center">            
+          <h1 className='text-3xl font-semibold m-5 bg-gradient-to-r from-rose-500 to-cyan-500 inline-block text-transparent bg-clip-text'>MY NOTES</h1>
+          <div className='notes flex flex-wrap items-start justify-center '>
             <div className='note border shadow-md border-zinc-200 flex flex-col items-center w-11/12 min-[600px]:w-2/5 md:w-80 m-3 rounded-md'>
                 <div className="date border border-x-0 border-t-0 border-b-zinc-200 p-2 w-full flex items-center justify-center">
                     <p className='font-bold text-lg'>06 - 02 - 2024</p>
@@ -84,9 +84,7 @@ const Profile = () => {
                     <NoteInfo />
                 </div>
             </div>
-
-
-            </div>
+          </div>
         </div>
 
       </div>

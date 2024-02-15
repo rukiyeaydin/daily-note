@@ -6,7 +6,7 @@ const NewNote = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <button
-        className="bg-gradient-to-r from-zinc-100 to-zinc-600 text-white hover:scale-105 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-11/12"
+        className="text-white bg-cyan-600 hover:scale-105 font-bold uppercase text-sm px-2 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-11/12"
         type="button"
         onClick={() => setShowModal(true)}
       >
@@ -21,14 +21,6 @@ const NewNote = () => {
                   <h3 className="text-xl font-semibold border-b border-solid border-gray-300 pb-3">
                     Create New Note
                   </h3>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      ×
-                    </span>
-                  </button>
                 </div>
                 <div className="relative p-6 flex flex-col items-center justify-center w-full">
                     <textarea type="text" className="border-2 border-gray-400 p-2 w-11/12 h-52 focus:outline-none text-sm resize-none rounded-md" />

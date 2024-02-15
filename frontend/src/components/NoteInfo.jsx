@@ -20,14 +20,6 @@ const NoteInfo = () => {
                                 <h3 className="text-xl font-semibold border-b border-solid border-gray-300 pb-3 w-full text-center">Note Header</h3>
                             }
                             
-                            <button
-                            className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                            onClick={() => setShowModal(false)}
-                            >
-                            <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                                ×
-                            </span>
-                            </button>
                         </div>
                         <div className="relative p-6 flex flex-col items-center justify-center w-full">
                             {isEditClicked 
@@ -35,7 +27,7 @@ const NoteInfo = () => {
                                 <textarea type="text" className="border-2 border-gray-400 p-2 w-11/12 h-52 focus:outline-none text-sm resize-none rounded-md" /> 
                                 :
                                 <div className="flex flex-col items-center justify-center">
-                                    <p className="mb-10 w-11/12 max-h-52 overflow-y-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, debitis. Voluptate placeat quibusdam sit repellat sequi magnam vero! Perferendis, corrupti nihil qui modi officiis explicabo sint quidem, quis architecto magnam ullam ipsum perspiciatis nemo suscipit at distinctio. Quis voluptatum nemo aliquid voluptates eum, vero obcaecati sequi! Eveniet assumenda eius sequi veniam commodi ipsam quia! Optio velit non voluptatum vero, placeat necessitatibus! Adipisci mollitia recusandae explicabo voluptas, in minima at pariatur quisquam ullam dignissimos repudiandae totam natus, suscipit amet esse temporibus!</p>
+                                    <p className="note-info mb-10 w-11/12 max-h-52 overflow-y-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, debitis. Voluptate placeat quibusdam sit repellat sequi magnam vero! Perferendis, corrupti nihil qui modi officiis explicabo sint quidem, quis architecto magnam ullam ipsum perspiciatis nemo suscipit at distinctio. Quis voluptatum nemo aliquid voluptates eum, vero obcaecati sequi! Eveniet assumenda eius sequi veniam commodi ipsam quia! Optio velit non voluptatum vero, placeat necessitatibus! Adipisci mollitia recusandae explicabo voluptas, in minima at pariatur quisquam ullam dignissimos repudiandae totam natus, suscipit amet esse temporibus!</p>
                                     <hr className="border-1 border-gray-300 w-72 mb-2"/>
                                     <p className="italic">14 / 02 / 2024</p>
                                     <hr className="border-1 border-gray-300 w-72 mt-2"/>

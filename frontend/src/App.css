@@ -5,23 +5,23 @@
 }
 
 /* width */
-::-webkit-scrollbar {
+.note-info::-webkit-scrollbar {
     width: 5px;
 }
  
 /* Track */
-::-webkit-scrollbar-track {
+.note-info::-webkit-scrollbar-track {
     background: #cecece;
     border-radius: 5px;
 }
  
 /* Handle */
-::-webkit-scrollbar-thumb {
+.note-info::-webkit-scrollbar-thumb {
     background: #303030;
     border-radius: 5px;
 }
  
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.note-info::-webkit-scrollbar-thumb:hover {
     background: #303030;
 }

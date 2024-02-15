@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const ProfileSettings = () => {
   const [editing, setEditing] = useState(false);
@@ -71,7 +70,7 @@ const ProfileSettings = () => {
           <p className="text-cyan-700">********</p>
         )}
       </div>
-      <button className="bg-cyan-700 hover:bg-cyan-600 transition-all p-1 rounded-md w-20 text-sm text-white" onClick={editing ? handleSave : handleEdit}>
+      <button className="bg-cyan-600 hover:bg-cyan-500 transition-all p-1 rounded-md w-20 text-sm text-white" onClick={editing ? handleSave : handleEdit}>
         {editing ? "Save" : "Edit"}
       </button>
     </div>
