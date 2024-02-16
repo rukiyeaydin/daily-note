@@ -27,24 +27,9 @@ const SearchUser = () => {
                                 <button className='text-sm border border-rose-500 bg-rose-500 hover:bg-white hover:text-rose-500 text-white px-2 py-1 rounded-lg transition-all duration-200'>search</button>
                             </div>
                             <div className='profiles w-full flex flex-col items-center justify-center'>
-                                <div className="profile border border-cyan-600 px-2 py-1 rounded-md my-2 w-1/2 text-sm">
+                                <div className="profile border border-emerald-500 px-2 py-1 rounded-md my-2 w-1/2 text-sm bg-emerald-500 text-white">
                                     <Link>
-                                        <p className='w-full truncate'>johndoesnjkbshbahsbhabshvahgsvghavghsvgavasgavgh</p>
-                                    </Link>
-                                </div>
-                                <div className="profile border border-cyan-600 px-2 py-1 rounded-md my-2 w-1/2 text-sm">
-                                    <Link>
-                                        <p className='w-full truncate'>johndoesnjkbshbahsbhabshvahgsvghavghsvgavasgavgh</p>
-                                    </Link>
-                                </div>
-                                <div className="profile border border-cyan-600 px-2 py-1 rounded-md my-2 w-1/2 text-sm">
-                                    <Link>
-                                        <p className='w-full truncate'>johndoesnjkbshbahsbhabshvahgsvghavghsvgavasgavgh</p>
-                                    </Link>
-                                </div>
-                                <div className="profile border border-cyan-600 px-2 py-1 rounded-md my-2 w-1/2 text-sm">
-                                    <Link>
-                                        <p className='w-full truncate'>johndoesnjkbshbahsbhabshvahgsvghavghsvgavasgavgh</p>
+                                        <p className='w-full truncate hover:underline'>johndoesnjkbshbahsbhabshvahgsvghavghsvgavasgavgh</p>
                                     </Link>
                                 </div>
 
