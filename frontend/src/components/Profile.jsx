@@ -14,12 +14,13 @@ const Profile = () => {
     setActive(!active);
   }
 
+//   shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]
   return (
     <div className='flex'>
       {active ?
-        <div className="left flex flex-col w-10/12 md:w-1/3 text-white bg-neutral-800 px-3 z-10 pb-28 rounded-br-2xl">
-          <div className=' p-3 text-white flex flex-col items-center justify-center rounded-md'>
-            <h1 className='font-bold text-xl w-max border border-b-gray-400 border-t-0 border-x-0 pb-1 mb-3'>Rukiye Aydın</h1>
+        <div className="left flex flex-col w-10/12 sm:w-72 text-white bg-neutral-800 px-3 z-10 h-[calc(100vh-70px)] rounded-br-2xl">
+          <div className=' p-3 text-white flex flex-col items-center rounded-md'>
+            <h1 className='font-bold text-xl w-max p-1 border border-b-sky-600 border-t-0 border-x-0 mb-3'>Rukiye Aydın</h1>
             <p className='w-max mb-5'>Total Notes: 13</p>
           </div>
           <ProfileSettings />
