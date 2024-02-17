@@ -17,13 +17,14 @@ const NewNote = () => {
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none w-full">
             <div className="relative my-6 mx-auto w-11/12 md:w-1/2">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col items-center justify-center bg-white outline-none focus:outline-none text-black">
-                <div className="flex items-center justify-center p-5 rounded-t">
+                <div className="flex flex-col items-center justify-center p-5 rounded-t">
                   <h3 className="text-xl font-semibold border-b border-solid border-gray-300 pb-3">
                     Create New Note
                   </h3>
+                  <input type="text" className="mt-5 border border-gray-400 focus:outline-none rounded-md px-2 py-1 text-sm" placeholder="Note header..." />
                 </div>
-                <div className="relative p-6 flex flex-col items-center justify-center w-full">
-                    <textarea type="text" className="border-2 border-gray-400 p-2 w-11/12 h-52 focus:outline-none text-sm resize-none rounded-md" />
+                <div className="relative pb-6 flex flex-col items-center justify-center w-full">
+                    <textarea type="text" className="border-2 border-gray-400 p-2 w-11/12 h-52 focus:outline-none text-sm resize-none rounded-md" placeholder="Note content..." />
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
                   <button

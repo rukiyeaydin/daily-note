@@ -6,10 +6,10 @@ const Home = () => {
   return (
     <div className='flex flex-col items-center justify-between'>
 
-        <div className='bg-zinc-100 p-6 md:p-12 flex flex-col items-center justify-center mb-5'>
+        <div className='bg-zinc-100 p-6 md:p-12 flex flex-col items-center justify-center'>
             <p className='font-bold text-2xl md:text-4xl'>How Does DN Works?</p>
             <br /><br />
-            <p className='text-lg md:text-xl text-center'>Welcome to Dail Note, your simple solution for taking notes on the go!.</p>
+            <p className='text-lg md:text-xl text-center'>Welcome to Daily Note, your simple solution for taking notes on the go!</p>
             <br /><br />
             <div className="flex flex-col justify-center items-center min-[1250px]:flex-row">
                 <div className="flex flex-row items-center w-full border-b-4 border-emerald-500 rounded-3xl my-4 md:mx-4 p-4">
@@ -38,7 +38,7 @@ const Home = () => {
             <button className='w-36'><NewNote /></button>
         </div>
 
-        <div className="flex flex-col items-center justify-center">            
+        <div className="flex flex-col items-center justify-center mt-5 mb-10">            
           <h1 className='text-3xl font-semibold m-5 bg-gradient-to-r from-rose-500 to-cyan-500 inline-block text-transparent bg-clip-text'>EXPLORE</h1>
           <div className='notes flex flex-wrap items-start justify-center '>
             <div className='note border shadow-md border-zinc-200 flex flex-col items-center w-11/12 min-[600px]:w-2/5 md:w-80 m-3 rounded-md'>
