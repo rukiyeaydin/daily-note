@@ -8,7 +8,7 @@ import NewNote from './NewNote';
 
 
 const Profile = () => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(true)
 
   const handleActive = () => {
     setActive(!active);

@@ -22,6 +22,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use(require('./endpoints/auth'))
+app.use(require('./endpoints/user'))
 
 app.listen(PORT, () => {
     console.log("server is running");
