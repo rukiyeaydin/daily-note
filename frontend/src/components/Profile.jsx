@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './general.css'
 import ProfileSettings from './ProfileSettings'
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import NoteInfo from './NoteInfo';
 import NewNote from './NewNote';
+import { UserContext } from '../App';
 
 
 const Profile = () => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
+  const { state, dispatch } = useContext(UserContext)
 
   const handleActive = () => {
     setActive(!active);
@@ -20,7 +22,7 @@ const Profile = () => {
       {active ?
         <div className="left flex flex-col w-10/12 sm:w-72 text-white bg-neutral-800 px-3 z-10 h-[calc(100vh-70px)] rounded-br-2xl">
           <div className=' p-3 text-white flex flex-col items-center rounded-md'>
-            <h1 className='font-bold text-xl w-max p-1 border border-b-sky-600 border-t-0 border-x-0 mb-3'>Rukiye Aydın</h1>
+            <h1 className='font-bold text-xl w-max p-1 border border-b-sky-600 border-t-0 border-x-0 mb-3'>{state && state.name}</h1>
             <p className='w-max mb-5'>Total Notes: 13</p>
           </div>
           <ProfileSettings />

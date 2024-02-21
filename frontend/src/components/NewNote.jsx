@@ -2,6 +2,36 @@ import React, { useState } from "react";
 
 const NewNote = () => {
     const [showModal, setShowModal] = useState(false);
+    const [header, setHeader] = useState("")
+    const [content, setContent] = useState("")
+
+    const createNote = () => {
+      fetch("http://localhost:5100/create-note", {
+        method: "post",
+        headers: {
+          "Content-Type":"application/json",
+          "Authorization": "Bearer " + localStorage.getItem("jwt"),
+        },
+        body: JSON.stringify({
+          header: header,
+          content: content,
+        })
+      }).then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if(data.error){
+          alert(data.error)
+        }
+        else{
+          alert("New note created")
+          window.location.reload()
+        }
+      }).catch(err => {
+        console.log(err)
+      })
+
+      setShowModal(false)
+    }
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -21,10 +51,22 @@ const NewNote = () => {
                   <h3 className="text-xl font-semibold border-b border-solid border-gray-300 pb-3">
                     Create New Note
                   </h3>
-                  <input type="text" className="mt-5 border border-gray-400 focus:outline-none rounded-md px-2 py-1 text-sm" placeholder="Note header..." />
+                  <input 
+                  type="text" 
+                  className="mt-5 border border-gray-400 focus:outline-none rounded-md px-2 py-1 text-sm" 
+                  placeholder="Note header..." 
+                  value={header}
+                  onChange={(e) => setHeader(e.target.value)}
+                  />
                 </div>
                 <div className="relative pb-6 flex flex-col items-center justify-center w-full">
-                    <textarea type="text" className="border-2 border-gray-400 p-2 w-11/12 h-52 focus:outline-none text-sm resize-none rounded-md" placeholder="Note content..." />
+                    <textarea 
+                    type="text" 
+                    className="border-2 border-gray-400 p-2 w-11/12 h-52 focus:outline-none text-sm resize-none rounded-md" 
+                    placeholder="Note content..." 
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
+                    />
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
                   <button
@@ -37,7 +79,7 @@ const NewNote = () => {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={createNote}
                   >
                     Save Changes
                   </button>
